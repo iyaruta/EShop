@@ -24,3 +24,12 @@ VALUES (1, 'mask')
 
 INSERT INTO SECTION (CATEGORY_ID, NAME)
 VALUES (4, 'phone')
+
+INSERT INTO PRODUCT(section_Id, name, description, price, quantity, discount)
+VALUES (1, 'for face', 'moisturizing', 50.25, 10, 0)
+
+INSERT INTO PRODUCT(section_Id, name, description, price, quantity, discount)
+VALUES (1, 'for hand', 'moisturizing', 10.25, 20, 0)
+
+INSERT INTO PRODUCT(section_Id, name, description, price, quantity, discount)
+VALUES (5, 'samsungC5', 'text', 150, 5, 0)

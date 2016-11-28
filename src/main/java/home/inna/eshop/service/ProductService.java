@@ -7,4 +7,6 @@ import java.util.List;
 public interface ProductService {
 
     List<Product> findBySectionId(Long sectionId);
+
+    Product findByProductId(Long productId);
 }
