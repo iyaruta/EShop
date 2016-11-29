@@ -9,5 +9,7 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
 
     List<Product> findBySectionId(Long sectionId);
 
-    Product findByProductId(Long product);
+    Product findById(Long productId);
+
+
 }

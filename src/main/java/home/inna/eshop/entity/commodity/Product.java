@@ -13,12 +13,22 @@ public class Product {
     @Id
     private Long id;
 
-    @Column(name = "section_id")
+    @Column(name = "section_Id")
     private Long sectionId;
+
+    @Column(name = "name")
     private String name;
+
+    @Column(name = "description")
     private String description;
+
+    @Column(name = "price")
     private BigDecimal price;
+
+    @Column(name = "quantity")
     private Long quantity;
+
+    @Column(name = "discount")
     private BigDecimal discount;
 
     public Long getId() {

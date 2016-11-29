@@ -22,4 +22,5 @@ public class CatalogServiceImpl implements CatalogService {
     @Override
     public Catalog get(Long id) {return catalogRepository.findOne(id);}
 
+
 }
