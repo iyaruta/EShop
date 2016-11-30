@@ -1,6 +1,6 @@
 package home.inna.eshop.controller;
 
-import home.inna.eshop.entity.commodity.Basket;
+import home.inna.eshop.entity.commodity.BasketLine;
 import home.inna.eshop.entity.commodity.Product;
 import home.inna.eshop.service.BasketService;
 import home.inna.eshop.service.ProductService;
@@ -27,20 +27,10 @@ public class ShopingCartController {
     @Autowired
     private BasketService basketService;
 
-
-    @RequestMapping(method = RequestMethod.GET)
-    public String addProduct(Long productId, Model model, HttpServletRequest req) {
-        Product product = productService.getId(productId);
-        HttpSession session = req.getSession();
-        session.setAttribute("product", product);
-        model.addAttribute("product", product);
-        return "shoping/shopingCart";
-    }
-
     @RequestMapping
     public String get(Model model, HttpSession session) {
         Map<Long, Integer> basket = getBasket(session);
-        List<Basket> lines = basketService.get(basket);
+        List<BasketLine> lines = basketService.get(basket);
         model.addAttribute("lines", lines);
         return "basket";
     }

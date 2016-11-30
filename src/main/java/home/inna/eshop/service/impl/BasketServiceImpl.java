@@ -1,6 +1,6 @@
 package home.inna.eshop.service.impl;
 
-import home.inna.eshop.entity.commodity.Basket;
+import home.inna.eshop.entity.commodity.BasketLine;
 import home.inna.eshop.entity.commodity.Product;
 import home.inna.eshop.repository.ProductRepository;
 import home.inna.eshop.service.BasketService;
@@ -19,13 +19,13 @@ public class BasketServiceImpl implements BasketService {
     private ProductRepository productRepository;
 
     @Override
-    public List<Basket> get(Map<Long, Integer> basket) {
+    public List<BasketLine> get(Map<Long, Integer> basket) {
         return basket.entrySet().stream().map(e -> toBasket(e.getKey(), e.getValue())).collect(toList());
     }
 
-    private Basket toBasket(Long productId, Integer count) {
+    private BasketLine toBasket(Long productId, Integer count) {
         Product product = productRepository.findById(productId);
-        return new Basket(product, count);
+        return new BasketLine(product, count);
     }
 
 }
