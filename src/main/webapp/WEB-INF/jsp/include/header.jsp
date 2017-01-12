@@ -40,7 +40,7 @@
                     </form>
                 </div>
                 <div class="col-lg-4">
-                    <a href="/shopingCart" class="btn btn-success">Shoping cart</a>
+                    <a href="/basket" class="btn btn-success">Shopping cart</a>
                 </div>
             </div>
 

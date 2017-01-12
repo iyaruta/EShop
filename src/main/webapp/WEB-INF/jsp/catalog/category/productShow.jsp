@@ -19,7 +19,7 @@
             <tr>
                 <td scope="row">${status.index + 1}</td>
                 <th><a href="/product/${product.id}" class="active">${product.name}</a></th>
-                <th><a href="/basket/${product.id}/add" class="active"></a>Добавить в корзинку</th>
+                <td><a href="/basket/${product.id}/add" class="active">Добавить в корзинку</a></td>
             </tr>
         </c:forEach>
     </div>
